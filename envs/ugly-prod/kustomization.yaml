@@ -8,5 +8,9 @@ resources:
 components:
 - ../../variants/prod
 
+replicas:
+- name: price-optimisation
+  count: 2
+
 patchesStrategicMerge:
-- price-planning-replicas.yaml
+- price-planning-resources.yaml
