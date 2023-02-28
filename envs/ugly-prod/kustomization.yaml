@@ -5,5 +5,8 @@ resources:
 - ../../apps/price-optimisation/envs/prod
 - ../../apps/price-planning/envs/prod
 
+components:
+- ../../variants/prod
+
 patchesStrategicMerge:
 - price-planning-replicas.yaml

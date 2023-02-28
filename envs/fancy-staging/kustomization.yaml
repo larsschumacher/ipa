@@ -5,3 +5,6 @@ resources:
 - ../../apps/price-optimisation/envs/staging
 - ../../apps/price-planning/envs/staging
 - ../../apps/competitive-pricing/envs/staging
+
+components:
+- ../../variants/staging
