@@ -10,6 +10,14 @@ labels:
   includeSelectors: false
   includeTemplates: true
 
+configMapGenerator:
+- name: price-optimisation
+  literals:
+  - BUSINESS_RULE_SERVICE_URL=http://business-rule-service/api/business-rule-service
+  - BUSINESS_RULE_SERVICE_TIMEOUT_SECONDS=10
+  - BUSINESS_RULE_SERVICE_RETRIES=3
+  - BUSINESS_RULE_SERVICE_RETRY_BACKOFF_FACTOR=4
+
 resources:
 - deployment.yaml
 - service.yaml

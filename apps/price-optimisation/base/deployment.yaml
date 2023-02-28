@@ -19,6 +19,26 @@ spec:
         image: larsaifora/echo-service
         imagePullPolicy: IfNotPresent
         env:
+        - name: BUSINESS_RULE_SERVICE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: price-optimisation
+              key: BUSINESS_RULE_SERVICE_URL
+        - name: BUSINESS_RULE_SERVICE_TIMEOUT_SECONDS
+          valueFrom:
+            configMapKeyRef:
+              name: price-optimisation
+              key: BUSINESS_RULE_SERVICE_TIMEOUT_SECONDS
+        - name: BUSINESS_RULE_SERVICE_RETRIES
+          valueFrom:
+            configMapKeyRef:
+              name: price-optimisation
+              key: BUSINESS_RULE_SERVICE_RETRIES
+        - name: BUSINESS_RULE_SERVICE_RETRY_BACKOFF_FACTOR
+          valueFrom:
+            configMapKeyRef:
+              name: price-optimisation
+              key: BUSINESS_RULE_SERVICE_RETRY_BACKOFF_FACTOR
         - name: DD_ENV
           valueFrom:
             fieldRef:
