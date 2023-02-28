@@ -2,6 +2,6 @@ kind: Kustomization
 apiVersion: kustomize.config.k8s.io/v1beta1
 
 resources:
-- ../../apps/price-optimisation/envs/dev
-- ../../apps/price-planning/envs/dev
-- ../../apps/competitive-pricing/envs/dev
+- ../../apps/price-optimisation/envs/prod
+- ../../apps/price-planning/envs/prod
+- ../../apps/competitive-pricing/envs/prod
