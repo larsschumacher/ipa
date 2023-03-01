@@ -12,5 +12,19 @@ replicas:
 - name: price-optimisation
   count: 2
 
-patchesStrategicMerge:
-- price-planning-resources.yaml
+patches:
+- patch: |-
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: price-planning
+    spec:
+      template:
+        spec:
+          containers:
+          - name: price-planning
+            resources:
+              requests:
+                memory: 15Mi
+              limits:
+                memory: 15Mi
