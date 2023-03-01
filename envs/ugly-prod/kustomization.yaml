@@ -10,7 +10,7 @@ components:
 
 replicas:
 - name: price-optimisation
-  count: 3
+  count: 2
 
 patches:
 - patch: |-
