@@ -7,5 +7,4 @@ resources:
 - ../../apps/competitive-pricing/envs/prod
 
 components:
-- ../../variants/all
 - ../../variants/prod
