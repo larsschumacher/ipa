@@ -7,5 +7,5 @@ resources:
 components:
 - ../../variants/dev
 
-patchesStrategicMerge:
-- version.yaml
+patches:
+- path: version.yaml
