@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: price-optimisation-db-migration-
+  generateName: price-optimisation-db-migration-
+  annotations:
+    argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
+spec:
+  template:
+    spec:
+      containers:
+      - name: price-optimisation-db-migration
+        image: alpine:latest
+        command:
+          - "/bin/sh"
+          - "-ec"
+          - "echo 'Starting migration' && sleep 5 && echo 'Migration finished'"
+      restartPolicy: Never
+  backoffLimit: 2

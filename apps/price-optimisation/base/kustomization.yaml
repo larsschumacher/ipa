@@ -21,3 +21,4 @@ configMapGenerator:
 resources:
 - deployment.yaml
 - service.yaml
+- db-migration-job.yaml
